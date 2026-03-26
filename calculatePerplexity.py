@@ -1,7 +1,8 @@
 import getaya
 import geteu
-model_map = {"eu": geteu.getModelAndTokenizer, "aya": getaya.getModelAndTokenizer}
-
+from modelMap import model_map
+import sys
+import torch
 
 def compute_perplexity_for_batch(input_texts, model_id):
     model, tokenizer = model_map[model_id]()
@@ -31,7 +32,5 @@ def compute_perplexity_for_batch(input_texts, model_id):
         "mean_perplexity": mean_perplexity_score.item()
     }
 
-def getGoodTranslationsFewShot(sourcelang, targetlang):
-    return ""
-def createFewShotPrompt(sourceText, sourcelang, targetlang):
-   return getGoodTranslationsFewShot(sourcelang, targetlang) + "\n" + sourcelang + ": " + sourceText + "\n" + targetlang + "\; 
+
+
