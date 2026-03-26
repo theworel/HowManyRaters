@@ -1,0 +1,1 @@
+../v/bin/python3 generateBadTranslations.py $1 $2 

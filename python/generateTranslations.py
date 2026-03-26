@@ -1,9 +1,10 @@
 from modelMap import model_map
+from modelMap import token
 import sys
 from transformers import pipeline
 
 
-model, tokenizer = model_map[sys.argv[1]]()
+model, tokenizer = model_map[sys.argv[1]](token=token)
 filenameCz = sys.argv[2]
 filenameEn= sys.argv[3]
 filenameToTranslate = sys.argv[4]
