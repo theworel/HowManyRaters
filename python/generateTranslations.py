@@ -1,10 +1,9 @@
 from modelMap import model_map
-from modelMap import token
 import sys
 from transformers import pipeline
 
 
-model, tokenizer = model_map[sys.argv[1]](token=token)
+model, tokenizer = model_map[sys.argv[1]]()
 filenameCz = sys.argv[2]
 filenameEn= sys.argv[3]
 filenameToTranslate = sys.argv[4]
@@ -47,10 +46,11 @@ def createFewShotPrompt(sourceText, sourcelang, targetlang):
 
 def getTranslations(sourceSentencesFile, sourcelang, targetlang):
   translations = []
-  for line in sourceSentencesFile.readlines():
-    prompt = createFewShotPrompt(line, sourcelang, targetlang)
-    promptModel("user", prompt)
-    translations.append[prompt]
+  with open(sourceSentencesFile) as srcFile:
+    for line in srcFile.readlines():
+      prompt = createFewShotPrompt(line, sourcelang, targetlang)
+      t = promptModel("user", prompt)
+      translations.append(t)
   return translations
 
 translations = getTranslations(filenameToTranslate, srclang, targetlang)
