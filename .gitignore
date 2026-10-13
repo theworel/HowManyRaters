@@ -1,0 +1,11 @@
+# generated data and perplexities: too big for the repo, regenerate them locally
+/output20/
+/resources/output20/
+/resources/output30/
+/resources/output40/
+
+# cluster job logs, scratch files, bytecode
+/resources/*.sh.o*
+/resources/*.sh.e*
+/resources/temp.txt
+__pycache__/
