@@ -144,14 +144,16 @@ The perplexity scripts score only the `answer` part.
 
 ### `resources/`
 
-The `output20/`, `output30/` and `output40/` directories below are not
-committed (see above). The table shows the layout the scripts write.
+Only the source texts and prompts are committed. `bad/`, `out/`, `metrics/`,
+`misc/`, everything in `good/` except `cs.txt` / `en.txt`, and the `output20/`,
+`output30/` and `output40/` directories are in `.gitignore`. The table shows
+the layout the scripts write.
 
 | path | contents |
 |---|---|
 | `en.txt_unchanged`, `cs.txt_unchanged` | the 50 English sources and their Czech WMT references |
 | `prompts/` | few-shot templates: `en_to_cs.txt` / `cs_to_en.txt` (correct), `*_wrong.txt` (deliberately wrong examples, for the `bad` class), `corrupt_cs*.txt` (for LLM corruption) |
-| `good/`, `bad/`, `out/` | early (output10/20) generated data and raw pipeline output |
+| `good/`, `bad/`, `out/`, `metrics/`, `misc/` | early (output10/20) generated data, raw pipeline output and metrics (`good/cs.txt`, `good/en.txt` are committed, the rest is not) |
 | `output20/` | the second round of experiments |
 | `output30/<class>/<model>.txt` | the main dataset, one file per class and generating model (see below) |
 | `output30/perps/by<rater>/<class>/of<model>.txt` | perplexities, one number per unit |

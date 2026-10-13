@@ -9,3 +9,12 @@
 /resources/*.sh.e*
 /resources/temp.txt
 __pycache__/
+
+# early-round generated data and metrics (only the source texts in good/ are kept)
+/resources/bad/
+/resources/out/
+/resources/metrics/
+/resources/misc/
+/resources/good/*
+!/resources/good/cs.txt
+!/resources/good/en.txt
