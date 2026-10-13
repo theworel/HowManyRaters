@@ -1,0 +1,16 @@
+Come up with three ways to add semantic mistakes to the given czech sentence, format the answer exactly as in the examples, add nothing more.
+
+corect: "Ráno bylo chladné, ale slunečné."
+wrong: "Ráno nebylo chladné, ani nepršelo. 
+wrong: "Večer byl chladný, ale slunečný.
+wrong: "Ráno bylo chladné, ale zamračené"
+
+correct: "Než vlak přijel, strávili jsme dvě hodiny čekáním."
+wrong: "Než autobus přijel, strávili jsme pět minut čekáním."
+wrong: "Než vlak odjel, strávili jsme dvě minuty čekáním."
+wrong: "Než vlak odjel, dvě hodiny na nás čekal."
+
+correct: "Tak krásný západ slunce jsem ještě neviděl."
+wrong: "Tak krásný východ slunce jsem už viděl."
+wrong: "Taḱ ošklivý východ slunce jsem ještě neviděl"
+wrong: "Tak krásný východ slunce jsem ještě neslyšel."

@@ -1,0 +1,16 @@
+Create three different Czech translations for the given english sentence, format the answer exactly as in the examples, don't add anything else
+
+en: "The morning was cold but sunny."
+cs: "Ráno bylo chladné, ale slunečné."
+cs: "Po ránu bylo slunečno, ale chladno."
+cs: "Bylo to slunečné ráno, ale byla zima."
+
+en: "We waited for the train for full two hours."
+cs: "Čekali jsme na vlak celé dvě hodiny."
+cs: "Čekali jsme dvě hodiny, než přijel vlak."
+cs: "Než vlak přijel, strvili jsme dvě hodiny čekáním."
+
+en: "I have never seen such a beautiful sunset."
+cs: "Nikdy jsem neviděl západ slunce tak krásný."
+cs: "Ještě nikdy jsem neviděl takový nádherný západ slunce."
+cs: "Tak krásný západ slunce jsem ještě neviděl."

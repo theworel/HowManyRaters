@@ -1,0 +1,16 @@
+Create three different translations for the given czech sentence, format the answer exactly as in the examples, don't add anything else.
+
+cs: „Ráno bylo chladné, ale slunečné.“
+en: “The morning was cold but sunny.”
+en: “It was a chilly yet sunny morning.”
+en: “The morning felt crisp, though the sun was shining.”
+
+cs: „Čekali jsme na vlak celé dvě hodiny.“
+en: “We waited for the train for a full two hours.”
+en: “We spent two whole hours waiting for the train.”
+en: “We had to wait for the train for two hours straight.”
+
+cs: „Nikdy jsem neviděl tak krásný západ slunce.“
+en: “I have never seen such a beautiful sunset.”
+en: “I’ve never witnessed a sunset this beautiful.”
+en: “Never before have I seen such a stunning sunset.”

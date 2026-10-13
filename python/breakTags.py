@@ -2,10 +2,10 @@ import sys
 import random
 
 
-GENDERS = [F, I, M, N, X]
-NUMBER = [D, P, S]
-CASE = [1,2,3,4,5,6,7]
-PERSON = [1,2,3]
+GENDERS = ['F', 'I', 'M', 'N', 'X']
+NUMBER = ['D', 'P', 'S']
+CASE = ['1','2','3','4','5','6','7']
+PERSON = ['1','2','3']
 
 
 class Token:
@@ -36,23 +36,26 @@ def pickValue(original, values):
   copy = values.copy()
   if original in values:
     values.remove(original)
-  return random.choose(copy)
+  return random.choice(copy)
+
+def strReplace(original, index, new):
+  return original[:index] + new + original[index + 1:]
 
 def breakNounCase(nounToken):
-  nounToken.tag[4] = pickValue(nounToken.tag[4], CASE)
+  nounToken.tag = strReplace(nounToken.tag, 4, pickValue(nounToken.tag[4], CASE))
 
 def breakVerbPerson(verbToken):
-  verbToken.tag[9] = pickValue(verbToken.tag[9], PERSON)
+  verbToken.tag = strReplace(verbToken.tag, 7, pickValue(verbToken.tag[9], PERSON))
 
 def breakVerbGender(verbToken):
-  verbToken.tag[3] = pickValue(verbToken[3], GENDERS)
+  verbToken.tag = strReplace(verbToken.tag, 3, pickValue(verbToken.tag[3], GENDERS))
 
 def breakAdjGender(adjToken):
-  adjToken.tag[3] = pickValue(adjToken[3], GENDERS)
+  adjToken.tag = strReplace(adjToken.tag, 3, pickValue(adjToken.tag[3], GENDERS))
 
 breakerFunctions = [
-  CorruptingFunction(["VB, Vc, Vi, Vt"], breakVerbPerson),
-  CorruptingFunction(["VB, Vc, Vi, Vt"], breakVerbGender),
+  CorruptingFunction(["VB", "Vc", "Vi", "Vt"], breakVerbPerson),
+  CorruptingFunction(["VB", "Vc", "Vi", "Vt"], breakVerbGender),
   CorruptingFunction(["A"], breakAdjGender),
   CorruptingFunction(["N"], breakNounCase),
 ]
@@ -75,6 +78,10 @@ def breakTags(sentences):
         newSentences.append(sentence)
         break 
     if not success:
+      print("nothing worked", file=sys.stderr)
+      for token in sentence:
+        print(token.form, file = sys.stderr)
+        print(token.tag, file = sys.stderr)
       exit()
   return newSentences
 sentences = []
@@ -92,6 +99,7 @@ sentences = breakTags(sentences)
 for sentence in sentences:
   for token in sentence:
     token.write()
+    print(token.lemma, token.tag, file=sys.stderr)
   print("")
 
 

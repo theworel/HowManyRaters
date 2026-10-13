@@ -1,5 +1,8 @@
 import sys
+# for line in sys.stdin:
+#   print(line, file=sys.stderr)
 for line in sys.stdin:
+  # print(line, file=sys.stderr)
   line = line.strip()
   if(line == ""):
     print("")
