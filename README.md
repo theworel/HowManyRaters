@@ -1,4 +1,6 @@
-# How many
+# How many raters do we need to recognize a bad translation via perplexity
+
+https://www2.statmt.org/wmt26/pdf/2026.wmt-1.29.pdf
 
 Code for the paper on **detecting bad translations with perplexity**.
 LLMs translate English source sentences into Czech, both properly and with controlled damage, 
