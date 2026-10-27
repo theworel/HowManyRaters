@@ -1,17 +1,17 @@
-# npfl087-otmara
+# How many
 
-Code for the NPFL087 project on **detecting bad translations with perplexity**.
-LLMs translate English source sentences into Czech, both properly and badly (or
-the translations are damaged afterwards), and a panel of other LLMs ("raters")
+Code for the paper on **detecting bad translations with perplexity**.
+LLMs translate English source sentences into Czech, both properly and with controlled damage, 
+and a panel of other LLMs ("raters")
 then measures the perplexity of every translation. The question is how well
-those perplexities, from one rater or from an ensemble, tell the good
-translations from the bad ones.
+those perplexities tell the good
+translations from the bad ones and how that changes with different kinds of translation mistakes.
 
 ## What is *not* in this repository
 
 Three things the pipeline needs are deliberately left out. You have to get
 them yourself and put them **next to** this repository, not inside it. Every
-script is run from inside `npfl087-otmara/` and reaches them through `../`.
+script is run from inside `HowManyRaters/` and reaches them through `../`.
 
 | what | why it is missing | where it goes |
 |---|---|---|
